@@ -314,8 +314,20 @@ Screen:
 
 ![Screen Shot 2023-01-31 at 17 01 17](https://user-images.githubusercontent.com/111761417/215701262-0acc2b4f-165e-400e-b7ec-5d2a5ef4bbf7.png)
 
-https://user-images.githubusercontent.com/111761417/215701222-e163abfd-1de9-445e-9e82-7a438ea851ba.mov
+https://user-images.githubusercontent.com/111761417/215701548-ccac7284-f61e-43f2-85fb-798d5612b0cc.mov
 
+## TASK 2 (HL)
+
+### Instructions
+
+Create a GUI for a converter of Bits to Bytes following the table below:
+
+
+### Python file
+
+### Kivy file
+
+### Test
 
 
 
