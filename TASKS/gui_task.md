@@ -210,6 +210,9 @@ class convert(MDApp):
         elif user_start == '':
             self.count = 0
             self.root.ids.counter_label.text = f"B/.{self.count}"
+        else:
+            self.root.ids.counter_label.text = f"Ops! Only numbers!"
+
 
     def change(self, name: str):
         if 'dollar' in name:
@@ -223,6 +226,7 @@ class convert(MDApp):
 # demo_class is an object of the class layout_demo
 demo_convertor = convert()
 demo_convertor.run()
+
 
 ```
 ### Kivy file
@@ -327,15 +331,143 @@ Create a GUI for a converter of Bits to Bytes following the table below:
 ### Python file
 
 ```.py
+#convertor_bits_bytes.py
+
+from kivymd.app import MDApp
+
+
+class bits_to_bytes(MDApp):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.count = 0
+        self.bytes_count = 0
+        self.bits_count = 0
+
+    # we have to use to build the screen
+    def build(self):
+        return
+    def close(self):
+        exit()
+
+    def set_mode(self):
+        # validate that it is a digit
+        user_start = self.root.ids.user_start_x.text
+        if user_start.isdigit():
+            self.count = user_start
+            self.root.ids.counter_label.text = f"{self.count}"
+        elif user_start == '':
+            self.count = 0
+            self.root.ids.counter_label.text = f"{self.count}"
+        else:
+            self.root.ids.counter_label.text = f"Ops! Only numbers are accepted!"
+
+    def change(self, name: str):
+        self.count = int(self.count)
+        self.bytes_count = int(self.bytes_count)
+        self.bits_count = int(self.bits_count)
+        if self.root.ids.counter_label.text.isdigit():
+            if 'bytes' in name:
+                self.bytes_count = int(self.count) / 8
+                self.root.ids.counter_label.text = f"{self.bytes_count} BYTES"
+            if 'bits' in name:
+                self.bits_count = int(self.count) * 8
+                self.root.ids.counter_label.text = f"{self.bits_count} BITS"
+
+# demo_class is an object of the class layout_demo
+demo_bits = bits_to_bytes()
+demo_bits.run()
 
 ```
 
 ### Kivy file
 
 ```.py
+#currency_convertor.k
+
+Screen:
+    id: 500,500
+
+    MDBoxLayout:
+        id: welcome_box
+        orientation: "vertical"
+        size_hint: 1, .1
+        md_bg_color: "#778C62"
+        pos_hint: {"center_x":.5, "center_y":.7}
+
+        MDLabel:
+            id: label
+            text: "Welcome to the Bits Convertor!"
+            halign: "center"
+            font_size: '30pt'
+
+    MDBoxLayout:
+        id: close_box
+        orientation: "vertical"
+        size_hint: 1, .1
+        pos_hint: {"center_x":.5, "center_y":.2}
+
+        MDRaisedButton:
+            text: "Close"
+            size_hint: 1, 1
+            font_size: "20pt"
+            md_bg_color: "#C75554"
+            pos_hint: {"center_x":0.5}
+            on_press: app.close()
+
+    MDBoxLayout:
+        id: main_box
+        orientation: "vertical"
+        size_hint: 1, .3
+        md_bg_color: "#778C62"
+        pos_hint: {"center_x":.5, "center_y":.5}
+
+        MDTextField:
+            id: user_start_x
+            hint_text: "Enter Bits/Bytes"
+            mode: "rectangle"
+            icon_left: 'longitude'
+            size_hint: .30, .50
+            md_bg_color: "#778C62"
+            pos_hint: {"center_x":.5}
+            on_text: app.set_mode()
+
+        MDBoxLayout:
+            id: second_box
+            orientation: "horizontal"
+            md_bg_color: "#B2BC76"
+
+            MDLabel:
+                id: counter_label
+                font_style: "H3"
+                halign: "center"
+
+    MDBoxLayout:
+        id: third_box
+        orientation: "horizontal"
+        size_hint: 1, .1
+        pos_hint: {"center_x":.5, "center_y":.3}
+
+        MDRaisedButton:
+            id: on_btn
+            text: "BYTES"
+            on_press: app.change("bytes")
+            size_hint: .5, 1
+            md_bg_color: "#EF8F6E"
+
+        MDRaisedButton:
+            id: on_btn
+            text: "BITS"
+            on_press: app.change("bits")
+            size_hint: .5, 1
+            md_bg_color: "#EF8F6E"
 
 ```
 ### Test
+
+![Screen Shot 2023-01-31 at 23 42 22](https://user-images.githubusercontent.com/111761417/215792022-2108f17c-3437-452b-a0f5-7a372b39b3ea.png)
+
+https://user-images.githubusercontent.com/111761417/215793199-d9e91fad-5358-4cd3-9c02-383420039ca6.mov
+
 
 
 
