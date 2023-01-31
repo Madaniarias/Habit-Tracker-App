@@ -322,11 +322,19 @@ https://user-images.githubusercontent.com/111761417/215701548-ccac7284-f61e-43f2
 
 Create a GUI for a converter of Bits to Bytes following the table below:
 
+![Screen Shot 2023-01-31 at 17 06 27](https://user-images.githubusercontent.com/111761417/215702043-2618eba5-0e73-40ef-b60a-8d492f3ba8bd.png)
 
 ### Python file
 
+```.py
+
+```
+
 ### Kivy file
 
+```.py
+
+```
 ### Test
 
 
