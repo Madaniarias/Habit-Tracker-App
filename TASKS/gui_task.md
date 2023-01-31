@@ -186,7 +186,7 @@ Create a Currency Converter GUI that takes an integer representing an amount fro
 
 from kivymd.app import MDApp
 
-
+#Create class convert and initialize
 class convert(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -194,37 +194,42 @@ class convert(MDApp):
         self.dollar_count = 0
         self.japanese_count = 0
 
-    # we have to use to build the screen
+    # Building the screen
     def build(self):
         return
+    # Closing the screen
     def close(self):
         exit()
-
+    
+    # Create method set_money to allow the user to input the value for conversion
     def set_money(self):
-        # validate that it is a digit
-
         user_start = self.root.ids.user_start_x.text
+        #validate if the value is a digit. If it is, the value will show on the screen.
         if user_start.isdigit():
             self.count = user_start
             self.root.ids.counter_label.text = f"B/.{self.count}"
+        #if the user deletes the value that was inputted, set value on the label back to 0.
         elif user_start == '':
             self.count = 0
             self.root.ids.counter_label.text = f"B/.{self.count}"
+        #if the user inputs anything other than a number an error will show
         else:
             self.root.ids.counter_label.text = f"Ops! Only numbers!"
 
-
+    # Create method change to do the currency convertions
     def change(self, name: str):
+        # if the world dollar is found in name, transform balboas to dollar (they have the same value) and round to 2 decimals.
         if 'dollar' in name:
             self.count = int(self.count)
             self.dollar_count = float(round(self.count, ndigits=2))
             self.root.ids.counter_label.text = f"{self.dollar_count} $"
+        # if whatever other word is found in name, transform balboas to japanese yen and round to 2 decimals.
         else:
             self.count = int(self.count)
             self.japanese_count = float(round(self.count * 129.82, ndigits=2))
             self.root.ids.counter_label.text = f"{self.japanese_count} ¥ "
 
-# demo_class is an object of the class layout_demo
+# Run the program
 demo_convertor = convert()
 demo_convertor.run()
 
@@ -334,7 +339,7 @@ Create a GUI for a converter of Bits to Bytes following the table below:
 
 from kivymd.app import MDApp
 
-
+#Create class bits_to_bytes and initialize
 class bits_to_bytes(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -342,37 +347,45 @@ class bits_to_bytes(MDApp):
         self.bytes_count = 0
         self.bits_count = 0
 
-    # we have to use to build the screen
+    # Building the screen
     def build(self):
         return
+    # Closing the screen
     def close(self):
         exit()
-
+        
+    # Create method set_mode to allow the user to input the value for conversion
     def set_mode(self):
-        # validate that it is a digit
         user_start = self.root.ids.user_start_x.text
+        # validate that it is a digit. If it is, the value will show on the screen.
         if user_start.isdigit():
             self.count = user_start
             self.root.ids.counter_label.text = f"{self.count}"
+        #if the user deletes the value that was inputted, set value on the label back to 0.
         elif user_start == '':
             self.count = 0
             self.root.ids.counter_label.text = f"{self.count}"
+        #if the user inputs anything other than a number an error will show
         else:
             self.root.ids.counter_label.text = f"Ops! Only numbers are accepted!"
-
+    
+    #Create method change to do the bit<>bytes conversion
     def change(self, name: str):
         self.count = int(self.count)
         self.bytes_count = int(self.bytes_count)
         self.bits_count = int(self.bits_count)
+        #validate that is a digit
         if self.root.ids.counter_label.text.isdigit():
+            # if the word bytes is found in name, transform number to bytes.
             if 'bytes' in name:
                 self.bytes_count = int(self.count) / 8
                 self.root.ids.counter_label.text = f"{self.bytes_count} BYTES"
+            # if whatever other word in inputted, transform number to bits.
             if 'bits' in name:
                 self.bits_count = int(self.count) * 8
                 self.root.ids.counter_label.text = f"{self.bits_count} BITS"
-
-# demo_class is an object of the class layout_demo
+              
+# Run the program
 demo_bits = bits_to_bytes()
 demo_bits.run()
 
