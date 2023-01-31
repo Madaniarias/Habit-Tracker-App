@@ -216,17 +216,17 @@ class convert(MDApp):
 
     def change(self, name: str):
         if 'dollar' in name:
-            self.dollar_count = f"{self.count}"
+            self.count = int(self.count)
+            self.dollar_count = float(round(self.count, ndigits=2))
             self.root.ids.counter_label.text = f"{self.dollar_count} $"
         else:
             self.count = int(self.count)
-            self.japanese_count = f"{self.count * 130}"
+            self.japanese_count = float(round(self.count * 129.82, ndigits=2))
             self.root.ids.counter_label.text = f"{self.japanese_count} ¥ "
 
 # demo_class is an object of the class layout_demo
 demo_convertor = convert()
 demo_convertor.run()
-
 
 ```
 ### Kivy file
@@ -316,9 +316,8 @@ Screen:
 
 ### Test
 
-![Screen Shot 2023-01-31 at 17 01 17](https://user-images.githubusercontent.com/111761417/215701262-0acc2b4f-165e-400e-b7ec-5d2a5ef4bbf7.png)
+https://user-images.githubusercontent.com/111761417/215798115-dac29c37-fb3e-4c4a-bbdb-058e4248c84d.mov
 
-https://user-images.githubusercontent.com/111761417/215701548-ccac7284-f61e-43f2-85fb-798d5612b0cc.mov
 
 ## TASK 2 (HL)
 
@@ -463,8 +462,6 @@ Screen:
 
 ```
 ### Test
-
-![Screen Shot 2023-01-31 at 23 42 22](https://user-images.githubusercontent.com/111761417/215792022-2108f17c-3437-452b-a0f5-7a372b39b3ea.png)
 
 https://user-images.githubusercontent.com/111761417/215793199-d9e91fad-5358-4cd3-9c02-383420039ca6.mov
 
