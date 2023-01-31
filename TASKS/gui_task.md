@@ -12,7 +12,7 @@
 
 ### Python file
 
-'''.py
+```.py
 from kivymd.app import MDApp
 
 class example1(MDApp):
@@ -21,11 +21,11 @@ class example1(MDApp):
 
 test = example1()
 test.run()
-'''
+```
 
 ### Kivy file
 
-'''.py
+```.py
 
 Screen:
     size: 500, 500
@@ -34,5 +34,5 @@ Screen:
         text: "Hello World"
         halign: "center"
         font_size: "34pt"
-'''
+```
 
