@@ -17,16 +17,26 @@ to_roman(101) -> ValueError("Input number must be less than or equal to 100")
 ## CODE
 
 ```.py
+#Create class quiz034
 class quiz034:
+    
+    #initialize 
     def __init__(self, num:int):
         self.num = num
-
+    
+    #create method to_roman that takes a single integer as input. It returns a string representing the Roman numeral equivalent of the input number. 
     def to_roman(self)->str:
         num_rom = ""
+        
+        #Exception for when anything other than an integer is inputted
         if not isinstance(self.num,int):
             raise TypeError("Only integers are accepted")
+            
+        #Exception for when the number is not between 1 and 100
         if self.num > 100 or self.num <= 0:
             raise ValueError("The input must be between 1 and 100.")
+        
+        #Getting the roman numbers
         while self.num >0:
             for dig,i in [(100,'C'),(90,'XC'),(50,'L'),(40,'XL'),(10,'X'),(9,'IX'),(5,'V'),(4,'IV'),(1,'I')]:
                 if self.num >= dig:
