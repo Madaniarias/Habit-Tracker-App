@@ -335,66 +335,60 @@ Create a GUI for a converter of Bits to Bytes following the table below:
 ### Python file
 
 ```.py
-#convertor_bits_bytes.py
+# convertor_bits_bytes.py
 
 from kivymd.app import MDApp
+from numpy.compat import long
 
-#Create class bits_to_bytes and initialize
+
 class bits_to_bytes(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.count = 0
         self.bytes_count = 0
         self.bits_count = 0
+        self.multiple_count = 0
+        self.multiples_list = ["", "", "Kilo", "Mega", "Giga", "Tera", "Peta", "Exa"]
 
-    # Building the screen
+    # we have to use to build the screen
     def build(self):
         return
-    # Closing the screen
+
     def close(self):
         exit()
-        
-    # Create method set_mode to allow the user to input the value for conversion
+
     def set_mode(self):
+        # validate that it is a digit
         user_start = self.root.ids.user_start_x.text
-        # validate that it is a digit. If it is, the value will show on the screen.
         if user_start.isdigit():
             self.count = user_start
             self.root.ids.counter_label.text = f"{self.count}"
-        #if the user deletes the value that was inputted, set value on the label back to 0.
         elif user_start == '':
             self.count = 0
             self.root.ids.counter_label.text = f"{self.count}"
-        #if the user inputs anything other than a number an error will show
         else:
             self.root.ids.counter_label.text = f"Ops! Only numbers are accepted!"
-    
-    #Create method change to do the bit<>bytes conversion
+
     def change(self, name: str):
         self.count = int(self.count)
-        self.bytes_count = int(self.bytes_count)
-        self.bits_count = int(self.bits_count)
-        #validate that is a digit
         if self.root.ids.counter_label.text.isdigit():
-            # if the word bytes is found in name, transform number to bytes.
-            if 'bytes' in name:
-                self.bytes_count = int(self.count) / 8
-                self.root.ids.counter_label.text = f"{self.bytes_count} BYTES"
-            # if whatever other word in inputted, transform number to bits.
             if 'bits' in name:
-                self.bits_count = int(self.count) * 8
-                self.root.ids.counter_label.text = f"{self.bits_count} BITS"
-              
-# Run the program
+                bytes = self.count // 8
+                i = 0
+                while bytes > 1:
+                    bytes = bytes / 1000
+                    i += 1
+
+            self.root.ids.counter_label.text = f"{bytes * 1000} {self.multiples_list[i]} Bytes"
+            
 demo_bits = bits_to_bytes()
 demo_bits.run()
-
 ```
 
 ### Kivy file
 
 ```.py
-#currency_convertor.k
+#bits_to_bytes.kv
 
 Screen:
     id: 500,500
@@ -435,7 +429,7 @@ Screen:
 
         MDTextField:
             id: user_start_x
-            hint_text: "Enter Bits/Bytes"
+            hint_text: "Enter Bits"
             mode: "rectangle"
             icon_left: 'longitude'
             size_hint: .30, .50
@@ -453,30 +447,26 @@ Screen:
                 font_style: "H3"
                 halign: "center"
 
+
     MDBoxLayout:
         id: third_box
         orientation: "horizontal"
         size_hint: 1, .1
         pos_hint: {"center_x":.5, "center_y":.3}
 
-        MDRaisedButton:
-            id: on_btn
-            text: "BYTES"
-            on_press: app.change("bytes")
-            size_hint: .5, 1
-            md_bg_color: "#EF8F6E"
 
         MDRaisedButton:
             id: on_btn
-            text: "BITS"
+            text: "BYTES"
             on_press: app.change("bits")
-            size_hint: .5, 1
+            size_hint: 1, 1
             md_bg_color: "#EF8F6E"
 
 ```
 ### Test
 
-https://user-images.githubusercontent.com/111761417/215793199-d9e91fad-5358-4cd3-9c02-383420039ca6.mov
+![TASK2 FUNCTIONALITY](https://user-images.githubusercontent.com/111761417/217042133-c2540281-b361-4bbd-a256-59fb567866f0.png)
+
 
 
 
