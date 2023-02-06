@@ -465,8 +465,7 @@ Screen:
 ```
 ### Test
 
-![TASK2 FUNCTIONALITY](https://user-images.githubusercontent.com/111761417/217042133-c2540281-b361-4bbd-a256-59fb567866f0.png)
-
+https://user-images.githubusercontent.com/111761417/217042418-beee5ad4-a17e-41d6-8c53-ba7d2486316f.mov
 
 
 
