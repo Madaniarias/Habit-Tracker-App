@@ -50,9 +50,9 @@
 ## Test Plan
 | Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Functional:  |  |  |  | 
-| 2.      | Functional:  |  |  |  | 
-| 3.      | Functional:  |  |  |  | 
-| 4       | Non-functional:  |  |  |  | 
-| 5.      | Non-functional:  |  |  |  | 
-| 6.      | Non-functional:  |  |  |  | 
+| 1       | Functional:  |  |  |  
+| 2.      | Functional:  |  |  |  
+| 3.      | Functional:  |  |  |  
+| 4       | Non-functional:  |  |  |  
+| 5.      | Non-functional:  |  |  |  
+| 6.      | Non-functional:  |  |  |  
