@@ -48,7 +48,7 @@
 ## UML Diagrams
 
 ## Test Plan
-| Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
+| Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome  |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 | 1       | Functional:  |  |  |  
 | 2.      | Functional:  |  |  |  
