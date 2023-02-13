@@ -56,3 +56,15 @@
 | 4       | Non-functional:  |  |  |  
 | 5.      | Non-functional:  |  |  |  
 | 6.      | Non-functional:  |  |  |  
+
+# Criteria C: Development
+
+## Existing Tools
+
+## Techniques applied
+
+## Computational Thinking 
+
+# Criteria D: Functionality
+
+## Sources
