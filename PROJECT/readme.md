@@ -5,7 +5,7 @@
 
 ## Problem definition
 
-## Proposed Solution
+## Rationale for Proposed Solution
 
 ## Design statement
 
@@ -19,7 +19,7 @@
 | 1      | Planning: First meeting with client |  Getting a sense of what is the problem and the needs ofthe client. Start to get a deeper understanding of how does the desire interface looks for the client. Note taking on the meeting  | 6min                  | Feb 9 | A
 | 2      | Analysis of planning meeting | Taking information learnt form the first meeting with the client to see what was understood from the developer part and present next meeting with client to confirm if the information was understood correctly. |  10 min  | Feb 9 | A
 | 3      | Planning: Second meeting with client |  |  | Feb | A
-| 4      |  |  |  |  | 
+| 4      | Analysis of planning meeting |  |  | Feb | A
 | 5      |  |  |  |  | 
 | 6      |  |  |  |  | 
 | 7      |  |  |  |  | 
@@ -37,6 +37,22 @@
 | 19     |  |  |  |  |
 | 20     |  |  |  |  |
 
+## System Diagram
+
+## Wireframe
+
 ## Flow Diagrams
 
+## ER Diagrams
 
+## UML Diagrams
+
+## Test Plan
+| Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
+|---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Functional:  |  |  |  | 
+| 2.      | Functional:  |  |  |  | 
+| 3.      | Functional:  |  |  |  | 
+| 4       | Non-functional:  |  |  |  | 
+| 5.      | Non-functional:  |  |  |  | 
+| 6.      | Non-functional:  |  |  |  | 
