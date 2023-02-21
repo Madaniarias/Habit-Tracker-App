@@ -32,15 +32,18 @@
 
 ## Success Criteria
 
+1. There is login syste with a username, email and password
+2. Button to create 
+
 # Criteria B: Design
 
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1      | Planning: First meeting with client |  Getting a sense of what is the problem and the needs ofthe client. Start to get a deeper understanding of how does the desire interface looks for the client. Note taking on the meeting  | 6min                  | Feb 9 | A
+| 1      | Planning: First meeting with client |  Getting a sense of what is the problem and the needs of the client. Start to get a deeper understanding of how does the desire interface looks for the client. Note taking on the meeting  | 6min                  | Feb 9 | A
 | 2      | Analysis of planning meeting | Taking information learnt form the first meeting with the client to see what was understood from the developer part and present next meeting with client to confirm if the information was understood correctly. |  10 min  | Feb 9 | A
-| 3      | Planning: Second meeting with client |  |  | Feb | A
-| 4      | Analysis of planning meeting |  |  | Feb | A
+| 3      | Planning: Second meeting with client | Getting a sense of what is the problem and the needs ofthe client. Go together through the information again and understand can be made and what cannot. Note taking on the meeting | 5 min | Feb 21 | A
+| 4      | Analysis of planning meeting | Taking information learnt form the second meeting with the client to see what was understood from the developer part and present next meeting with client to confirm if the information was understood correctly. | 15 min | Feb 21 | A
 | 5      |  |  |  |  | 
 | 6      |  |  |  |  | 
 | 7      |  |  |  |  | 
