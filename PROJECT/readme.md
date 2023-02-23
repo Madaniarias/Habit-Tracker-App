@@ -44,15 +44,15 @@
 | 2      | Analysis of planning meeting | Taking information learnt form the first meeting with the client to see what was understood from the developer part and present next meeting with client to confirm if the information was understood correctly. |  10 min  | Feb 9 | A
 | 3      | Planning: Second meeting with client | Getting a sense of what is the problem and the needs ofthe client. Go together through the information again and understand can be made and what cannot. Note taking on the meeting | 5 min | Feb 21 | A
 | 4      | Analysis of planning meeting | Taking information learnt form the second meeting with the client to see what was understood from the developer part and present next meeting with client to confirm if the information was understood correctly. | 15 min | Feb 21 | A
-| 5      |  |  |  |  | 
-| 6      |  |  |  |  | 
-| 7      |  |  |  |  | 
-| 8      |  |  |  |  |  
-| 9      |  |  |  |  |  
-| 10     |  |  |  |  |  
-| 11     |  |  |  |  | 
-| 12     |  |  |  |  | 
-| 13     |  |  |  |  | 
+| 5      | Problem definition | After the meetings with the client, establish the problem that the project is going to be solving specifically and what are the main needs of the client | 20 min | Feb 23 | A
+| 6      | Rationale for Proposed Solution |  | 10 min | Feb 23 | A
+| 7      | Design statement |  | 5 min | Feb 23 | A
+| 8      | Succes criteria |  | 5 min | Feb 23 |  A
+| 9      | Approval of Criteria A by the client|  | 20 min | Feb 23 | A 
+| 10     | System Diagram |  |  | Feb 23 |  B
+| 11     | Wireframe |  |  |  | 
+| 12     | Flow Diagrams |  |  |  | 
+| 13     | ER Diagrams |  |  |  | 
 | 14     |  |  |  |  | 
 | 15     |  |  |  |  |  
 | 16     |  |  |  |  | 
