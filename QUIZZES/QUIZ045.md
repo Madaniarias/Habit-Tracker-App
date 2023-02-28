@@ -1,7 +1,7 @@
 # QUIZ042
 
 ## INSTRCUTIONS
-![Screen Shot 2023-02-28 at 9 46 03](https://user-images.githubusercontent.com/111761417/221722984-b480c145-cd4f-438c-9d76-ba7374c50fe0.png)
+![Screen Shot 2023-02-28 at 9 48 47](https://user-images.githubusercontent.com/111761417/221723523-188e08a3-6ed7-4698-9819-fb5a965206be.png)
 
 ## CODE
 
