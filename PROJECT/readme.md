@@ -53,7 +53,14 @@ I will design and make a habit tracker application for a highschool student. The
 
 Color palette provided:
 
-Habits agreed on:
+![IMG_0177](https://user-images.githubusercontent.com/111761417/223729114-8eedd061-e2ed-427f-9e90-f4e64055604b.jpg)
+
+Habits agreed on for the habit tracker application:
+1)
+2)
+3)
+4)
+5)
 
 # Criteria B: Design
 
