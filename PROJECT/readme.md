@@ -26,11 +26,11 @@
 
 ## Problem definition
 
-A highschool student, Lison Hebert, is interested in building good habits to improve her daily rutine and help her reach your goals. She has been manually keeping track of her habit completion in a personal diary, however at the moment this method has become too time consuming and tedious to keep track off. It is also difficult for the highschool student to see the progresss in an organized manner. The client is in need of a habit tracker application that helps her visualize, organize and keep track of her progress in the course of developing good habits. 
+A highschool student, Lison Hebert, is interested in building good habits to improve her daily rutine and help her reach your goals. She has been manually keeping track of her habit completion in a personal diary, however at the moment this method has become too time consuming and tedious to keep track off. It is also difficult for the highschool student to see the progresss in an organized manner. The client is in need of a habit tracker application that helps her visualize, organize and keep track of her progress in the course of developing good habits. Additional, it si important to consider that the client's budget is limited.
 
 ## Rationale for Proposed Solution
 
-Considering the client requirements an adequate solution includes a habit tracker application that helps her visualize, organize and keep track of her progress in the course of developing good habits. For a this application it may adequate to consider a computer program with a GUI( Graphical User Interface) that can store data into a database. 
+Considering the client requirements an adequate solution includes a habit tracker application that helps her visualize, organize and keep track of her progress in the course of developing good habits. For this application it may adequate to consider a computer program with a GUI( Graphical User Interface) that can store data into a database. Considering the budgetary constrains of the client, the software tool that I proposed for this solution is Python. Python is free and platform-independent. That is, if you write the code on one of the Windows, Mac, or Linux operating systems, then you can run the same code on the other OS with no need for any changes so it can be run. In other words, it can be supported by multiple platforms. Nevertheless, requieres a lot of memeory[^1]. Regarding data storage for this solution, SQLite can be a good option. SQLite is the most used database engine in the world. SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications that people use every day. The code for SQLite is in the public domain and is thus free for use for any purpose, commercial or private[^2]. A database engine is the software that does the real work of sorting the information, finding specific data that you request, and so on [^3]. This 
 
 For a low cost sensing device an adequate alternative is the DHT11 sensor1 which is offered online for less than 5 USD and provides adequare precision and range for the client requirements (Temperature Range: 0°C to 50°C, Humidity Range: 20% to 90%). Similar devices such as the DHT22, AHT20 or the AM2301B 2 have higher specifications, however the DHT11 uses a simple serial communication (SPI) rather than more eleborated protocols such as the I2C used by the alternatives. For the range, precision and accuracy required in this applicaiton the DHT11 provides the best compromise. Connecting the DHT11 sensor to a computer requires a device that provides a Serial Port communication. A cheap and often used alternative for prototyping is the Arduino UNO microcontroller 3. "Arduino is an open-source electronics platform based on easy-to-use hardware and software"4. In additon to the low cost of the Arduino (< 6USD), this devide is programable and expandable1. Other alternatives include diffeerent versions of the original Arduino but their size and price make them a less adequate solution.
 
@@ -40,12 +40,15 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 ## Success Criteria
 
-1. The solution provides a login screen utilizing email and will be protected by password and a registration screen rquesting username, email, password and check the password to create a new user.
-2. The solution will display all habit history, showing per day the completion per each individual habit and overall habit completion of the particular day. 
+1. The solution provides a login screen that uses email and is protected by password. Also, povides a registration screen that requests username, email, password and checks the password.
+2. The solution will display the history of all habits. It will show the completion of each individual habit and overall habit completion of a particular dat.
 3. The solution provides a tracking system for up 5 habits.
-4. The solution allows the user to save habit completion per day and displays the progress graphically.
-5. The solution's overall application displays should mostly use color provided in the color pallette and buttons should be a distingable size.
+4. The solution allows the user to save habit completion per day and displays the progress in a graphic manner.
+5. The solution's overall application displays should mostly use the color palette provided by the client and buttons should be a distingable size.
 6. The solution should include a log out button for the user to close the session.
+
+Color palette provided
+Habits agreed on 
 
 # Criteria B: Design
 
@@ -104,3 +107,9 @@ Considering the budgetary constrains of the client and the hardware requirements
 # Criteria D: Functionality
 
 ## Sources
+
+[^1]: “Advantages of Python | Disadvantages of Python.” Python Geeks, 25 June 2021, pythongeeks.org/advantages-disadvantages-of-python/.
+[^2]: SQLite. “About SQLite.” Sqlite.org, 2019, www.sqlite.org/about.html.
+[^3]: “What Is Database Engine?” Computer Notes, 10 Apr. 2014, ecomputernotes.com/fundamental/what-is-a-database/database engine#:~:text=In%20a%20computer%20database%2C%20the. Accessed 8 Mar. 2023.
+
+
