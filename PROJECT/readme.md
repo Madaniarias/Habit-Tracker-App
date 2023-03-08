@@ -26,14 +26,26 @@
 
 ## Problem definition
 
+A highschool student, Lison Hebert, is interested in building good habits to improve her daily rutine and help her reach your goals. She has been manually keeping track of her habit completion in a personal diary, however at the moment this method has become too time consuming and tedious to keep track off. It is also difficult for the highschool student to see the progresss in an organized manner. The client is in need of a habit tracker application that helps her visualize, organize and keep track of her progress in the course of developing good habits. 
+
 ## Rationale for Proposed Solution
+
+Considering the client requirements an adequate solution includes a habit tracker application that helps her visualize, organize and keep track of her progress in the course of developing good habits. For a this application it may adequate to consider a computer program with a GUI( Graphical User Interface) that can store data into a database. 
+
+For a low cost sensing device an adequate alternative is the DHT11 sensor1 which is offered online for less than 5 USD and provides adequare precision and range for the client requirements (Temperature Range: 0°C to 50°C, Humidity Range: 20% to 90%). Similar devices such as the DHT22, AHT20 or the AM2301B 2 have higher specifications, however the DHT11 uses a simple serial communication (SPI) rather than more eleborated protocols such as the I2C used by the alternatives. For the range, precision and accuracy required in this applicaiton the DHT11 provides the best compromise. Connecting the DHT11 sensor to a computer requires a device that provides a Serial Port communication. A cheap and often used alternative for prototyping is the Arduino UNO microcontroller 3. "Arduino is an open-source electronics platform based on easy-to-use hardware and software"4. In additon to the low cost of the Arduino (< 6USD), this devide is programable and expandable1. Other alternatives include diffeerent versions of the original Arduino but their size and price make them a less adequate solution.
+
+Considering the budgetary constrains of the client and the hardware requirements, the software tool that I proposed for this solution is Python. Python is open source, it is mature and supported in mutiple platforms (platform-independent) including macOS, Windows, Linux and can also be used to program the Arduino microprocessor 56. In comparison to the alternative C or C++, which share similar features, Python is a High level programming language (HLL) with high abstraction 7. For example, memory management is automatic in Python whereas it is responsability of the C/C++ developer to allocate and free up memory 7, this could result in faster applications but also memory problems. In addition a HLL language will allow me and future developers extend the solution or solve issues proptly.
 
 ## Design statement
 
 ## Success Criteria
 
-1. There is login syste with a username, email and password
-2. Button to create 
+1. The solution provides a login screen utilizing email and will be protected by password and a registration screen rquesting username, email, password and check the password to create a new user.
+2. The solution will display all habit history, showing per day the completion per each individual habit and overall habit completion of the particular day. 
+3. The solution provides a tracking system for up 5 habits.
+4. The solution allows the user to save habit completion per day and displays the progress graphically.
+5. The solution's overall application displays should mostly use color provided in the color pallette and buttons should be a distingable size.
+6. The solution should include a log out button for the user to close the session.
 
 # Criteria B: Design
 
