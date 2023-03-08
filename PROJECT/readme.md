@@ -77,6 +77,10 @@ Color palette provided:
 
 ## System Diagram
 
+![SYSTEM DIAGRAM P3](https://user-images.githubusercontent.com/111761417/223740333-6ab10612-27bc-4ce5-9bb6-018a3a3c5cb4.jpeg)
+
+<sub>FIG 1. System Diagram is divided in Keyboard and Screen (Connected). Following by the computer (MacBook Air) and Processor (Dual-Core Intel Core i5 1.8GHz 8GB. Next, the Operating System (OS: MacOS 12.5 (21G72). For the software we are using Python 3.10.7. For the GUI (Graphic Unser Interface) we are using KivyMD.uix. Operating inside the software, there is 2 python files (habit_tracker.py and secure_password). Operating inside the GUI, teh is one file (habit_kivy.kv). Lastly, this is connected to the database engine SQLite. There is one database (habit_tracker.db) with 2 tables inside (user and habit).
+
 ## Wireframe
 
 ## Flow Diagrams
