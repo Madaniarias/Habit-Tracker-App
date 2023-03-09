@@ -90,8 +90,23 @@ Color palette provided:
 ## Flow Diagrams
 
 ## ER Diagrams
+### CHECKBOX FUNCTIONALITY   
+![Unit3project-12](https://user-images.githubusercontent.com/111761417/224130527-81cb9fd7-4fcc-49db-a2b8-6a258de9ce99.jpg)
+<sub>FIG 3. The function "checkbox_click updates the state of the checkboxes and the progress bar in response to the user clicking on a checkbox. It also updates a label in the GUI to show the percentage of habits completed. 
+  
+### SAVING USER'S PROGRESS
+  
+![Unit3project-13](https://user-images.githubusercontent.com/111761417/224131337-96aec571-69f5-4fca-b2d3-cce50878b298.jpg
+<sub>FIG 4. The function "save" retrieves the progress status of the user's habits, the selected date and user_id, and saves this data into the database after checking if progress for the selected date has already been saved. It also displays an error message if progress is already registered or a confirmation message if the progress is updated successfully.
+  
+### DELETING SAVED PROGRESS
+  
+![image](https://user-images.githubusercontent.com/111761417/224131708-a23cbb19-eae1-4d60-83d3-580fff84dd4b.png)
+
+<sub>FIG 5. The function "delete" retrieves the selected rows from the data table of the GUI, loops through each selected row and deletes the corresponding progress data from the database using the unique ID of the row. Once all selected rows have been deleted, the function refreshes the data table in the GUI to display the updated progress data.
 
 ## UML Diagrams
+  
 
 ## Test Plan
 | Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome | |
