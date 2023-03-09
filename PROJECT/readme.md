@@ -88,15 +88,14 @@ Color palette provided:
 <sub>FIG 2. The image displays the Wireframe diagram for the habit tracker. It shows the skeleton of a website or an application's user interface (UI) and core functionality. The Wireframe is divided in Login Screen, Register Screen, Main Screen and History Screen. The application will open in the Login Scrren. Here, the user has the option to login or register. If clicked register, this will take the use to the Register Screen where the user will have the option to go back to the Login Screen or to fill the information required and resgister. If clicked login, the user will be taken to the Main Screen. Here, the user has the option to check boxes to mark habits completed, save the progress, select the date, see history and log out. If clicked log out, the user will be taken back to the Login Screen. If clicked save, the user will save the habits marked by the checkboxes, the day and the percentage of completion. If clicked date, the user will be able to select the date. If clicked history, the user will be take to the History Screen. Here, the user has the option to see history of all habits, delete a day or go back to Main Screen . If clicked Back, the user will be taken back to the Main Screen. If clicked delete, the user will delete the row selected by the checkbox on the history display above.
 
 ## Flow Diagrams
-
-## ER Diagrams
+  
 ### CHECKBOX FUNCTIONALITY   
 ![Unit3project-12](https://user-images.githubusercontent.com/111761417/224130527-81cb9fd7-4fcc-49db-a2b8-6a258de9ce99.jpg)
 <sub>FIG 3. The function "checkbox_click updates the state of the checkboxes and the progress bar in response to the user clicking on a checkbox. It also updates a label in the GUI to show the percentage of habits completed. 
   
 ### SAVING USER'S PROGRESS
   
-![Unit3project-13](https://user-images.githubusercontent.com/111761417/224131337-96aec571-69f5-4fca-b2d3-cce50878b298.jpg
+![Unit3project-13](https://user-images.githubusercontent.com/111761417/224131337-96aec571-69f5-4fca-b2d3-cce50878b298.jpg)
 <sub>FIG 4. The function "save" retrieves the progress status of the user's habits, the selected date and user_id, and saves this data into the database after checking if progress for the selected date has already been saved. It also displays an error message if progress is already registered or a confirmation message if the progress is updated successfully.
   
 ### DELETING SAVED PROGRESS
@@ -104,6 +103,9 @@ Color palette provided:
 ![image](https://user-images.githubusercontent.com/111761417/224131708-a23cbb19-eae1-4d60-83d3-580fff84dd4b.png)
 
 <sub>FIG 5. The function "delete" retrieves the selected rows from the data table of the GUI, loops through each selected row and deletes the corresponding progress data from the database using the unique ID of the row. Once all selected rows have been deleted, the function refreshes the data table in the GUI to display the updated progress data.
+
+## ER Diagrams
+
 
 ## UML Diagrams
   
