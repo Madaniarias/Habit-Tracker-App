@@ -104,11 +104,14 @@ Color palette provided:
 
 <sub>FIG 5. The function "delete" retrieves the selected rows from the data table of the GUI, loops through each selected row and deletes the corresponding progress data from the database using the unique ID of the row. Once all selected rows have been deleted, the function refreshes the data table in the GUI to display the updated progress data.
 
-## ER Diagrams
+## ER Diagram
+![Unit3project-16](https://user-images.githubusercontent.com/111761417/224141791-d91c9d79-258f-4eed-9965-3b3040f71e40.jpg)
+<sub>FIG 6. This image shows ER Diagram for the two tables: user, habit.
 
-
-## UML Diagrams
-  
+## UML Diagram
+ 
+![Unit3project-15 (1)](https://user-images.githubusercontent.com/111761417/224138154-991e1f2a-4c8c-4043-812d-87c03d09cc2d.jpg)
+<sub>FIG 7. This image shows the UML diagram for the habit tracker. Here are displayed the classes and methods used to develop the application. The diagram includes two main parent classes: MDApp and MDScreen. All subclasses inherit methods and attributes from these parent classes, as indicated by the arrows in the diagram.  
 
 ## Test Plan
 | Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome | |
