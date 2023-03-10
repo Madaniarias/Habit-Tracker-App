@@ -129,7 +129,7 @@ Color palette provided:
 <sub>FIG 5. The function "delete" retrieves the selected rows from the data table of the GUI, loops through each selected row and deletes the corresponding progress data from the database using the unique ID of the row. Once all selected rows have been deleted, the function refreshes the data table in the GUI to display the updated progress data.
 
 ## ER Diagram
-![Unit3project-16](https://user-images.githubusercontent.com/111761417/224141791-d91c9d79-258f-4eed-9965-3b3040f71e40.jpg)
+![er fixed](https://user-images.githubusercontent.com/111761417/224234089-aa2d71d4-f02c-456e-bf23-459ef10e5bc8.jpeg)
 <sub>FIG 6. This image shows ER Diagram for the two tables: user, habit.
 
 ## UML Diagram
