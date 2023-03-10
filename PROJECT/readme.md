@@ -59,21 +59,47 @@ Color palette provided:
 | 3      | Planning: Second meeting with client | Getting a sense of what is the problem and the needs ofthe client. Go together through the information again and understand can be made and what cannot. Note taking on the meeting | 5 min | Feb 21 | A
 | 4      | Analysis of planning meeting | Taking information learnt form the second meeting with the client to see what was understood from the developer part and present next meeting with client to confirm if the information was understood correctly. | 15 min | Feb 21 | A
 | 5      | Problem definition | After the meetings with the client, establish the problem that the project is going to be solving specifically and what are the main needs of the client | 20 min | Feb 23 | A
-| 6      | Rationale for Proposed Solution |  | 10 min | Feb 23 | A
-| 7      | Design statement |  | 5 min | Feb 23 | A
-| 8      | Succes criteria |  | 5 min | Feb 23 |  A
-| 9      | Approval of Criteria A by the client|  | 20 min | Feb 23 | A 
-| 10     | System Diagram |  |  | Feb 23 |  B
-| 11     | Wireframe |  |  |  | 
-| 12     | Flow Diagrams |  |  |  | 
-| 13     | ER Diagrams |  |  |  | 
-| 14     | Update Test Plan |  |  | March 9 | B
-| 15     |  |  |  |  |  
-| 16     |  |  |  |  | 
-| 17     |  |  |  |  | 
-| 18     |  |  |  |  | 
-| 19     |  |  |  |  |
-| 20     |  |  |  |  |
+| 6      | Planning: Establishing Success criteria | Taking into account the problem definition previously established, meet with the client once again to establish the success criteria for the habit tracker. Establish where the primary focus should be when developing th application to satisfy the client's neccesities | 10 min | Feb 23 | A
+| 7      | Approval of Success Criteria by Client | After meeting with the client, sent a finalized version of the succes criteria and got approval of the 6 succes criteria by the client | 20 min | Feb 23 | A 
+| 8      | Design statement | taking into account the previously approved succes criteria and problem definition, explain in a consice and clear manner the purpose of the project to the client | 5 min | Feb 23 | A
+| 9      | Rationale for Proposed Solution | Analize the design statement, success criteria and client's needs and determine which tools best suit the development of the habit tracker application  | 20 min | Feb 23 | A
+| 10     | System Diagram | Draw the system diagram for the habit tracker to have a clear idea of the hardware and software requirements for the proposed solution. | 30 min | March 1 |  B
+| 11     | Wireframe | Draw the wireframe for the habit tracker to have a clear idea of the design of the screens and functionality for the proposed solution. | 45 min | March 1 |  B
+| 12     | Planning: Design approval by client | Meet with client and show and explain wireframa diagram and got approval for the habit tracker application design | 30 min | March 2 | B
+| 13     | ER Diagrams | Draw the ER Diagram for the habit tracker application to have a clear idea of the tables needed in the database for the proposed solution. | 10 min | March 2 | B
+| 14     | Create Hashing system | Code the a hashing system for password protectio using 'sha256' to encrypt password and check password in login and registration. | 60 min | March 2 | C
+| 15     | Alpha Testing | Test the code fro the hashing system. | 5 min | March 2 |  C
+| 16     | Create GUI (Graphical User Interface) for login |  |  |  | 
+| 17     | Fix Login GUI (Graphical User Interface) |  |  |  | 
+| 18     | Create GUI (Graphical User Interface) for Register |  |  |  | 
+| 19     | Create database handler class |  |  |  |
+| 20     | Create code for Login system |  |  |  |
+| 21     | Create code for registration system |  |  |  | 
+| 22     | Create password policy |  |  |  | 
+| 23     | Start Main Screen GUI |  |  |  | 
+| 24     | Create Habit Tracking System pt.1: Labels and checkboxes |  |  |  | 
+| 25     | Create Habit Tracking System pt.2: Progress Bar |  |  |  | 
+| 26     | Create Habit Tracking System pt.3: Progress percentage |  |  |  | 
+| 27     | Create Habit Tracking System pt.4: Date selection |  |  |  | 
+| 28     | Create Habit Tracking System pt.5: Save button |  |  |  | 
+| 29     | Create History Screen Button |  |  |  | 
+| 30     | Create and code Log out button |  |  |  | 
+| 31     | Fix Main Screen GUI (Graphical User Interface)|  |  |  | 
+| 32     | Create GUI (Graphical User Interface) for History Screen |  |  |  | 
+| 33     | Create code for History of all habits display |  |  |  | 
+| 34     | Create code for user specific History table display |  |  |  | 
+| 35     | Add checkboxes to history table display |  |  |  | 
+| 36     | Create delete button |  |  |  | 
+| 37     | Create and code back button |  |  |  | 
+| 38     | Create code to delete saved progress from history table display |  |  |  | 
+| 39     | Alpha testing |  |  |  | 
+| 40     | Meeting and Beta testing by client |  |  |  | 
+| 41     | Fix errors |  |  |  | 
+| 42     | Alpha testing |  |  |  | 
+| 43     | Meeting and Beta testing by client |  |  |  | 
+| 44     | Final approval by client |  |  |  | 
+| 45     | Flow diagrams |  |  |  | 
+| 46     | UML Diagram |  |  |  |
 
 ## System Diagram
 
