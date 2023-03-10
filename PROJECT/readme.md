@@ -282,7 +282,84 @@ class LoginScreen(MDScreen):
 ```
 The Login System from the habit tracker application is inside the Class LoginScreen. This class is a subclass of the MDScreen class and defines the behavior of the login screen of a habit tracker app. Firstly, the try_login method is will be used when the user tries to log in by clicking the "Log In" button on the login screen. Later, the local variables email and pasword are defined. Here is where what the user enters as email and password will be saved. Then, a connection to the database is estalished. A query is created to select the ID and password hash of the user with the given email from the user table of the database and then is executed using search method. Then a password policy is created with if statements. If the query returns a non-empty result, the hashed password is identified using the identify method of the pwd_config module and checked against the password entered by the user using the check_password function. Later, an elif is used to state that if the password entered by the user matches the hashed password in the database, the ID of the user is stored in the user_id variable and the user is redirected to the main screen of the app by changing the current attribute of the parent screen manager to "MainScreen". If the email or password fields are empty or nothing that has been staed before, an error message is displayed and the email and passwd attributes are set to display an error state. The implementation of this login system is effective because allows the user to log into the app securely and verifies information entered by the user.
 
+### TRACKING SYSTEM
+  
+#### DATE SELECTOR, DISPLAY AND SAVE
+```.py
 
+# date selector
+def date(self):
+    date_dialog = MDDatePicker()
+    date_dialog.bind(on_save=self.on_save)
+    date_dialog.open()
+
+# saving date selected
+def on_save(self, instance, value, data_range):
+    self.selected_date = value
+    self.ids.progress_date.text = f"{value}"
+
+```
+This piece of code from the class MainScreen allows the user to clasify the habit progress per day. Here, the date() method creates an instance of MDDatePicker widget and binds the on_save method to its on_save event.Additionally, the on_save method saves the selected date in a class attribute called selected_date and sets the text of a label widget (progress_date) to the selected date. It is good to implement this as it is aked by the client in the succes criteria that there must be a habit progress per day classification. This provide a way for the user to select a date and display it in the user interface.
+  
+#### CONNECTING CHECKBOXES TO PROGRESS BAR AND DISPLAY PERCENTAGE OF OVERALL HABIT COMPLETION
+```.py
+# connecting checkboxes to percentage
+  def checkbox_click(self, value, habits):
+      self.checks[habits - 1] = int(value)
+      if value:
+          self.progress_amount += 20
+      else:
+          self.progress_amount -= 20
+
+      # displaying percentage
+      self.ids.progressbar.value = self.progress_amount
+      self.ids.percent_label.text = f"{self.progress_amount}%"
+```
+This piece of code from the class MainScreen aids in displaying the percentage of overall completion of habits for the user, connecting the checkboxes to progress bar and percent label. There are 2 arguments in the function: value and habits. Value is the state of the checkbox (True or False), and habits is an integer that specifies which habit the checkbox belongs to. The check state of the checkbox is stored in a list called self.checks, which is initialized to [0, 0, 0, 0, 0] in the init method. If the checkbox is checked (value = True), the corresponding element in the self.checks list is set to 1 and the progress_amount variable is incremented by 20. If checkbox is unchecked (value = False), the corresponding element in the self.checks list is set to 0 and the progress_amount variable is decremented by 20. This will update the progress bar value and label with the new progress_amount. This tracking system provides a simple and intuitive way for users to track their progress towards completing habits and complies with the succes criteria established by the user. Additionally, by using a progress bar and label to display the percentage, users can quickly see how close they are to achieving their goals.
+
+#### SAVE PROGRESS IN DATABASE
+  
+```.py
+# saving habit progress to database
+    def save(self):
+        # make user specific (only show relevant info to current user)
+        user_id = self.parent.get_screen('MainScreen').user_id  # Retrieve the user ID from the MainScreen instance
+        habit1 = MainScreen.checks[0]
+        habit2 = MainScreen.checks[1]
+        habit3 = MainScreen.checks[2]
+        habit4 = MainScreen.checks[3]
+        habit5 = MainScreen.checks[4]
+
+        progress_date = self.parent.get_screen(
+            'MainScreen').selected_date  # Retrieve the progress_date value from the MainScreen instance
+        percentage = self.parent.get_screen('MainScreen').progress_amount
+
+        # make so progress cant be saved twice for same day
+        if database_handler("habit_tracker.db").search(f"SELECT * FROM habit WHERE progress_date = '{progress_date}'"):
+            self.ids.save_button.error = True
+            self.ids.error_text.text = "*Progress for the day already registered."
+
+        # save progress into habit table in database
+        else:
+            db = database_handler("habit_tracker.db")
+            query = f"INSERT INTO habit(user_id, habit1,habit2,habit3,habit4,habit5, percentage, progress_date) VALUES ('{user_id}','{habit1}', '{habit2}', '{habit3}', '{habit4}', '{habit5}', '{percentage}','{progress_date}')"
+            db.run_save(query)
+            db.close()
+
+            # Show message to user
+            dialog = MDDialog(title="Congrats you updated your progress!")
+            dialog.open() 
+```
+This piece of code from the class MainScreen aids in saving the user's habit progress into the habit_tracker.db database. Firstly, to make it user specific and only show relevant information to the current logged user, the user ID, progress date, and progress percentage from the MainScreen instance. 
+The user's habit progress values from the MainScreen.checks list are also retrieved. The, the program will check if the porgres has been saved for that date. If it has, then it will display an error to the user explaining that the progress has already been saved for the date. If not, the it will insert the progress values and other relevant information into the habit table in the database and will display a message to user to let them know the progress has succesfully been updated. This part of code is very useful as it provides an efficient and reliable way to save the user's habit progress and prevent duplicate entries for the day. Additionally, helpful feedback is given to the user by displaying error messages and success messages, which improves the user experience.
+
+### HISTORY SCREEN
+  
+#### DISPLAY HISTORY OF ALL HABITS
+
+  
+ 
+  
 # Criteria D: Functionality
 
 ### VIDEO IN GOOGLE DRIVE FOLDER
