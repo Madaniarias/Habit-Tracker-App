@@ -150,11 +150,17 @@ Color palette provided:
 # Criteria C: Development
 
 ## Existing Tools
+  
+* Python
+* Pycharm
+* ChatGPT
+* KivyMD Library
+* SQLite Database
+* API
+* RGB colors
 
 ## Techniques applied
 
-* KivyMD Library
-* SQLite Database
 * For loops
 * if statements
 * For loops
