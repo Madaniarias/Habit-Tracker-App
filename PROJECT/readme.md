@@ -228,6 +228,10 @@ The database_hadler class is creating a database handler for SQLite databases. F
 ### LOGIN SYSTEM
 
 ```.py
+# Create class LoginScreen
+class LoginScreen(MDScreen):
+
+    # Used for to confimr the information when the user logs in
     def try_login(self):
         # define local variables
         email = self.ids.email.text
@@ -276,11 +280,13 @@ The database_hadler class is creating a database handler for SQLite databases. F
             dialog.open()
 
 ```
-
+The Login System from the habit tracker application is inside the Class LoginScreen. This class is a subclass of the MDScreen class and defines the behavior of the login screen of a habit tracker app. Firstly, the try_login method is will be used when the user tries to log in by clicking the "Log In" button on the login screen. Later, the local variables email and pasword are defined. Here is where what the user enters as email and password will be saved. Then, a connection to the database is estalished. A query is created to select the ID and password hash of the user with the given email from the user table of the database and then is executed using search method. Then a password policy is created with if statements. If the query returns a non-empty result, the hashed password is identified using the identify method of the pwd_config module and checked against the password entered by the user using the check_password function. Later, an elif is used to state that if the password entered by the user matches the hashed password in the database, the ID of the user is stored in the user_id variable and the user is redirected to the main screen of the app by changing the current attribute of the parent screen manager to "MainScreen". If the email or password fields are empty or nothing that has been staed before, an error message is displayed and the email and passwd attributes are set to display an error state. The implementation of this login system is effective because allows the user to log into the app securely and verifies information entered by the user.
 
 
 # Criteria D: Functionality
 
+### VIDEO IN GOOGLE DRIVE FOLDER
+https://drive.google.com/drive/u/0/folders/1lZSkDyv0v5MI3IAEcOer2vDdfn5R5xUJ
   
 # Sources
 [^1]: “Advantages of Python | Disadvantages of Python.” Python Geeks, 25 June 2021, pythongeeks.org/advantages-disadvantages-of-python/.
