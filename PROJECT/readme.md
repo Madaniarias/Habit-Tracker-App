@@ -67,23 +67,23 @@ Color palette provided:
 | 11     | Wireframe | Draw the wireframe for the habit tracker to have a clear idea of the design of the screens and functionality for the proposed solution. | 45 min | March 1 |  B
 | 12     | Planning: Design approval by client | Meet with client and show and explain wireframa diagram and got approval for the habit tracker application design | 30 min | March 2 | B
 | 13     | ER Diagrams | Draw the ER Diagram for the habit tracker application to have a clear idea of the tables needed in the database for the proposed solution. | 10 min | March 2 | B
-| 14     | Create Hashing system | Code the a hashing system for password protectio using 'sha256' to encrypt password and check password in login and registration. | 60 min | March 2 | C
-| 15     | Alpha Testing | Test the code fro the hashing system. | 5 min | March 2 |  C
-| 16     | Create GUI (Graphical User Interface) for login |  |  |  | 
-| 17     | Fix Login GUI (Graphical User Interface) |  |  |  | 
-| 18     | Create GUI (Graphical User Interface) for Register |  |  |  | 
-| 19     | Create database handler class |  |  |  |
-| 20     | Create code for Login system |  |  |  |
-| 21     | Create code for registration system |  |  |  | 
-| 22     | Create password policy |  |  |  | 
-| 23     | Start Main Screen GUI |  |  |  | 
-| 24     | Create Habit Tracking System pt.1: Labels and checkboxes |  |  |  | 
-| 25     | Create Habit Tracking System pt.2: Progress Bar |  |  |  | 
-| 26     | Create Habit Tracking System pt.3: Progress percentage |  |  |  | 
-| 27     | Create Habit Tracking System pt.4: Date selection |  |  |  | 
-| 28     | Create Habit Tracking System pt.5: Save button |  |  |  | 
-| 29     | Create History Screen Button |  |  |  | 
-| 30     | Create and code Log out button |  |  |  | 
+| 14     | Create Hashing system | Code the hashing system for password protection using 'sha256' to encrypt password and check password in login and registration. | 60 min | March 2 | C
+| 15     | Alpha Testing | Test the code for the hashing system. | 5 min | March 2 |  C
+| 16     | Create GUI (Graphical User Interface) for login | Use KivyMD (GUI Tool) to create the design and visuals of the login screen. Add text fields to enter information such as email and password. Create buttons to Login and Resgiter. Create labels for welcome tittle. | 120 min | March 4 | C
+| 17     | Fix Login GUI (Graphical User Interface) | Fix placing of the text fields, buttons and welcome lable in the Graphical user interface to get a more clean login screen | 60 min | March 5 | C
+| 18     | Create GUI (Graphical User Interface) for Register | Use KivyMD (GUI Tool) to create the design and visuals of the register screen. Add text fields to enter information such as email, username, password and check password. Create buttons to go back to login and finalize registration. Create labels for "register" tittle. | 150 min | March 5 | C
+| 19     | Create database handler class | Create class named database_handler that provides methods to interact with a SQLite database.This class provides a simple interface for interacting with a SQLite database, including querying the database, inserting or modifying data, and creating tables. | 50 min | March 5 | C
+| 20     | Create code for Login system | Code the login system for user to login to Main screen. | 160 min | March 6 | C
+| 21     | Create code for registration system | Code the resgistration system for user to be added to the database and be able to log in. | 170 min | March 6 | C
+| 22     | Create password policy | Code a password policy that established certain requirements for the user when registering | 50 min | March 6 | C
+| 23     | Start Main Screen GUI (Graphical User Interface) | Create the design and visuals of the Main screen. Creat main boxes and tittle labels | 30 min | March 6 | C
+| 24     | Create Habit Tracking System pt.1: Labels and checkboxes | Create labels for each habit (5 habits as established on the success criteria), add checkboxes next to the labels and code the activation and deactivation of each checkbox. Connect checkboxes active/disable to database to save information of habit completion | 90 min | March 6 | C
+| 25     | Create Habit Tracking System pt.2: Progress Bar | Create Progress bar to display graphically completion of succes criteria. Connect to the habit checkboxes for inmediate update. | 60 min | March 6 | C
+| 26     | Create Habit Tracking System pt.3: Progress percentage | Create a label to display percentage accordingly with progress bar and link them together. | 30 min | March 6 | C
+| 27     | Create Habit Tracking System pt.4: Date selection | Create a button that displays a calendar to select the day that the habits are being completed. | 20 min | March 6 | C
+| 28     | Create Habit Tracking System pt.5: Save button | Create a save button that takes all the information from the checkboxes, progress bar and percentage and date selection and saves it in the database | 30 min | March 6 | C
+| 29     | Create History Screen Button | Create a button that takes you to the History Screen | 10 min | March 7 | C
+| 30     | Create and code Log out button | Create a log out that takes you to back to the login screen  | 5 min | March 7  | C
 | 31     | Fix Main Screen GUI (Graphical User Interface)|  |  |  | 
 | 32     | Create GUI (Graphical User Interface) for History Screen |  |  |  | 
 | 33     | Create code for History of all habits display |  |  |  | 
