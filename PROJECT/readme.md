@@ -162,7 +162,7 @@ Color palette provided:
 ## Techniques applied
 
 * For loops
-* if statements
+* If statements
 * For loops
 * Variables
 * Database interaction
@@ -174,8 +174,8 @@ Color palette provided:
 
 # Criteria D: Functionality
 
-## Sources
-
+  
+# Sources
 [^1]: “Advantages of Python | Disadvantages of Python.” Python Geeks, 25 June 2021, pythongeeks.org/advantages-disadvantages-of-python/.
 [^2]: SQLite. “About SQLite.” Sqlite.org, 2019, www.sqlite.org/about.html.
 [^3]: “What Is Database Engine?” Computer Notes, 10 Apr. 2014, ecomputernotes.com/fundamental/what-is-a-database/database engine#:~:text=In%20a%20computer%20database%2C%20the. Accessed 8 Mar. 2023.
