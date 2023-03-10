@@ -381,7 +381,7 @@ ScreenManager:
                 size_hint: .53,.05
                 pos_hint: {"center_x":.5}
                 font_size: "14pt"
-                on_press: root.back_login
+                on_press: root.parent.current = "LoginScreen"
 
             MDLabel:
                 size_hint: 1,.01
@@ -437,4 +437,5 @@ ScreenManager:
         on_press:root.parent.current = "MainScreen"
         md_bg_color: 183/255, 110/255, 121/255, 1
         pos_hint: {"center_x":.6,"center_y":.2}
+
 ```
