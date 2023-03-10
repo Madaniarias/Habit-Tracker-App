@@ -299,7 +299,7 @@ def on_save(self, instance, value, data_range):
     self.ids.progress_date.text = f"{value}"
 
 ```
-This piece of code from the class MainScreen allows the user to clasify the habit progress per day. Here, the date() method creates an instance of MDDatePicker widget and binds the on_save method to its on_save event.Additionally, the on_save method saves the selected date in a class attribute called selected_date and sets the text of a label widget (progress_date) to the selected date. It is good to implement this as it is aked by the client in the succes criteria that there must be a habit progress per day classification. This provide a way for the user to select a date and display it in the user interface.
+This couple of methods, date and on_save, from the class MainScreen allow the user to clasify the habit progress per day. Here, the date() method creates an instance of MDDatePicker widget and binds the on_save method to its on_save event.Additionally, the on_save method saves the selected date in a class attribute called selected_date and sets the text of a label widget (progress_date) to the selected date. It is good to implement this as it is aked by the client in the succes criteria that there must be a habit progress per day classification. This provide a way for the user to select a date and display it in the user interface.
   
 #### CONNECTING CHECKBOXES TO PROGRESS BAR AND DISPLAY PERCENTAGE OF OVERALL HABIT COMPLETION
 ```.py
@@ -315,7 +315,7 @@ This piece of code from the class MainScreen allows the user to clasify the habi
       self.ids.progressbar.value = self.progress_amount
       self.ids.percent_label.text = f"{self.progress_amount}%"
 ```
-This piece of code from the class MainScreen aids in displaying the percentage of overall completion of habits for the user, connecting the checkboxes to progress bar and percent label. There are 2 arguments in the function: value and habits. Value is the state of the checkbox (True or False), and habits is an integer that specifies which habit the checkbox belongs to. The check state of the checkbox is stored in a list called self.checks, which is initialized to [0, 0, 0, 0, 0] in the init method. If the checkbox is checked (value = True), the corresponding element in the self.checks list is set to 1 and the progress_amount variable is incremented by 20. If checkbox is unchecked (value = False), the corresponding element in the self.checks list is set to 0 and the progress_amount variable is decremented by 20. This will update the progress bar value and label with the new progress_amount. This tracking system provides a simple and intuitive way for users to track their progress towards completing habits and complies with the succes criteria established by the user. Additionally, by using a progress bar and label to display the percentage, users can quickly see how close they are to achieving their goals.
+The checkbox_click method from the class MainScreen aids in displaying the percentage of overall completion of habits for the user, connecting the checkboxes to progress bar and percent label. There are 2 arguments in the function: value and habits. Value is the state of the checkbox (True or False), and habits is an integer that specifies which habit the checkbox belongs to. The check state of the checkbox is stored in a list called self.checks, which is initialized to [0, 0, 0, 0, 0] in the init method. If the checkbox is checked (value = True), the corresponding element in the self.checks list is set to 1 and the progress_amount variable is incremented by 20. If checkbox is unchecked (value = False), the corresponding element in the self.checks list is set to 0 and the progress_amount variable is decremented by 20. This will update the progress bar value and label with the new progress_amount. This tracking system provides a simple and intuitive way for users to track their progress towards completing habits and complies with the succes criteria established by the user. Additionally, by using a progress bar and label to display the percentage, users can quickly see how close they are to achieving their goals.
 
 #### SAVE PROGRESS IN DATABASE
   
@@ -350,15 +350,81 @@ This piece of code from the class MainScreen aids in displaying the percentage o
             dialog = MDDialog(title="Congrats you updated your progress!")
             dialog.open() 
 ```
-This piece of code from the class MainScreen aids in saving the user's habit progress into the habit_tracker.db database. Firstly, to make it user specific and only show relevant information to the current logged user, the user ID, progress date, and progress percentage from the MainScreen instance. 
+The save method from the class MainScreen aids in saving the user's habit progress into the habit_tracker.db database. Firstly, to make it user specific and only show relevant information to the current logged user, the user ID, progress date, and progress percentage from the MainScreen instance. 
 The user's habit progress values from the MainScreen.checks list are also retrieved. The, the program will check if the porgres has been saved for that date. If it has, then it will display an error to the user explaining that the progress has already been saved for the date. If not, the it will insert the progress values and other relevant information into the habit table in the database and will display a message to user to let them know the progress has succesfully been updated. This part of code is very useful as it provides an efficient and reliable way to save the user's habit progress and prevent duplicate entries for the day. Additionally, helpful feedback is given to the user by displaying error messages and success messages, which improves the user experience.
 
 ### HISTORY SCREEN
   
 #### DISPLAY HISTORY OF ALL HABITS
 
-  
+```.py
+def on_pre_enter(self, *args):
+    # Before the screen is created, this code is run
+    self.data_table = MDDataTable(
+        size_hint=(.8, .5),
+        pos_hint={"center_x": .5, "center_y": .5},
+        use_pagination=True,
+        check=True,
+        # title for the coluns
+        column_data=[("ID on system", 35),
+                     ("User ID", 20),
+                     ("Study Math", 23),
+                     ("Go to gym", 23),
+                     ("Study CS", 23),
+                     ("Sleep 8 hours", 25),
+                     ("Make bed", 22),
+                     ("PERCENTAGE", 23),
+                     ("PROGRESS DATE", 25)
+                     ]
+    )
+
+    # checkbox selection
+    self.data_table.bind(on_row_press=self.row_pressed)
+    self.data_table.bind(on_check_press=self.check_pressed)
+    self.add_widget(self.data_table)  # add table to the GUI
+
+    # update table
+    self.update()
+```
+The on_pre_enter method from the class History Screen creates a data table in a GUI that displays progress data from the database. Firsltly, it creates an instance of an MDDataTable object with a specific size and position on the screen, as well as a list of column titles and their corresponding widths. Here, the row_pressed method will be used when a row is pressed and the check_pressed method will be called when a checkbox is pressed. Later, adds table to the GUI with add_widget method and then the update method is used to take the data saved in the database and display it on the table for the user to see. The purpose of this code is to fulfill the succes criteria of displaying the history of habit progress per day. Thanks to this, progress is displayed in a clean, understandable and organized manner. 
+
+#### DELETE HABIT PROGRESS FROM HISTORY 
+
+ ```.py
+      def delete(self):
+        checked_rows = self.data_table.get_row_checks()
+        db = database_handler("habit_tracker.db")
+
+        # for the checked rows
+        for r in checked_rows:
+            id = r[0]
+
+            # query to delete
+            query = f"delete from habit where id_habit={id}"
+            db.run_save(query)
+        db.close()
+
+        # update table
+        self.update()
+ ```
+The delete method from the class History Screen is responsible for deleting rows from the database table based on the selection of checkboxes in the MDDataTable widget. The method works by getting the IDs of the rows that were checked, connecting to the SQLite database, constructing a SQL query to delete the corresponding rows, executing the query, and updating the MDDataTable widget after the selected rows have been deleted. This method is useful because allows the user to delete specific rows of data from the habit tracker database. This is important because users may want to remove old or inaccurate data from their progress history, or they may want to clean up their database by removing unused or unnecessary data. By providing this functionality in the app, users can easily manage their progress data and keep their habit tracker organized and up-to-date.
  
+#### UPDATE METHOD
+
+```.py
+# update info
+    def update(self):
+        # make user specific
+        user_id = self.parent.get_screen('MainScreen').user_id
+        # read database
+        query = f"SELECT * FROM habit WHERE user_id={user_id}"
+        db = database_handler("habit_tracker.db")
+        data = db.search(query)
+        db.close()
+        self.data_table.update_row_data(None, data)
+  
+```
+The update method from the class History Screen is responsible for updating the data displayed in an MDDataTable widget. The method retrieves the user ID from the MainScreen instance, constructs a SQL query string to retrieve all rows from the habit table that correspond to the user, connects to the SQLite database, executes the SQL query to retrieve the selected rows, and closes the database connection. Finally, the method calls the update_row_data() method of the MDDataTable widget to update the data displayed. The implementation of this method may be useful because it provides a convenient way to display and update data in a user-friendly format. 
   
 # Criteria D: Functionality
 
