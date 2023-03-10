@@ -83,24 +83,23 @@ Color palette provided:
 | 27     | Create Habit Tracking System pt.4: Date selection | Create a button that displays a calendar to select the day that the habits are being completed. | 20 min | March 6 | C
 | 28     | Create Habit Tracking System pt.5: Save button | Create a save button that takes all the information from the checkboxes, progress bar and percentage and date selection and saves it in the database | 30 min | March 6 | C
 | 29     | Create History Screen Button | Create a button that takes you to the History Screen | 10 min | March 7 | C
-| 30     | Create and code Log out button | Create a log out that takes you to back to the login screen  | 5 min | March 7  | C
-| 31     | Fix Main Screen GUI (Graphical User Interface)|  |  |  | 
-| 32     | Create GUI (Graphical User Interface) for History Screen |  |  |  | 
-| 33     | Create code for History of all habits display |  |  |  | 
-| 34     | Create code for user specific History table display |  |  |  | 
-| 35     | Add checkboxes to history table display |  |  |  | 
-| 36     | Create delete button |  |  |  | 
-| 37     | Create and code back button |  |  |  | 
-| 38     | Create code to delete saved progress from history table display |  |  |  | 
-| 39     | Alpha testing |  |  |  | 
-| 40     | Meeting and Beta testing by client |  |  |  | 
-| 41     | Fix errors |  |  |  | 
-| 42     | Alpha testing |  |  |  | 
-| 43     | Meeting and Beta testing by client |  |  |  | 
-| 44     | Final approval by client |  |  |  | 
-| 45     | Flow diagrams |  |  |  | 
-| 46     | UML Diagram |  |  |  |
-
+| 30     | Create and code Log out button | Create a log out that takes you to back to the login screen  | 5 min | March 7 | C
+| 31     | Fix Main Screen GUI (Graphical User Interface)| Fix the display with all the new additions to the Main Screen to have a more clean and proportional look | 30 min | March 7 | C
+| 32     | Create GUI (Graphical User Interface) for History Screen | Use KivyMD (GUI Tool) to create the design and visuals of the history screen. | 30 min | March 7 | C
+| 33     | Create code for History of all habits display | Create a table display with all the data obtained form the main screen on the habit completion per day. | 90 min | March 7 | C 
+| 34     | Create code for user specific History table display | Create a code that only allows information relevant to the current user to display in the history habit table. | 15 min | March 7 | C
+| 35     | Add checkboxes to history table display | Create a code that add checkboxes to display in the history habit table to be able to select the data saved for a specific day. | 20 min | March 7 | C
+| 36     | Create delete button | Create a button that allows you to delete the data saved for a specific day that was selected with the checkbox from the history habit table. | 20 min | March 7 | C
+| 37     | Create and code back button | Create a button that allows you to go to the Main Screen | 5 min | March 7 | C 
+| 38     | Alpha testing | Test the code for the different functionalities created for the habit tracker application. | 15 min | March 8 | C
+| 39     | Meeting and Beta testing by client | Meet with the client and let them test the habit tracker. Get feedback on possible improvements/fixes. | 30 min | March 8 | C
+| 40     | Fix errors | Modify following the feedback given in the beta testing session with the user | 120 | March 9 | C
+| 41     | Alpha testing | Test the code for the different functionalities created for the habit tracker application after the feedback was implemented. | 15 min | March 9 | C
+| 42     | Meeting and Beta testing by client | Meet with the client and let them test the habit tracker. Get feedback on possible improvements/fixes. | 30 min | March 9 | C
+| 43     | Final approval by client | Obtain approval by the client on the overall development of the habit tracker application | 20 min | March 9 | C
+| 44     | Flow diagrams | Draw the flow diagrams for some of the important function inside the code for habit tracker application.  | 90 min | March 9 | C
+| 45     | UML Diagram | Draw the UML diagrams for the screen structure and internal functionality for habit tracker application. | 40 min | March 9 |
+C
 ## System Diagram
 
 ![SYSTEM DIAGRAM P3](https://user-images.githubusercontent.com/111761417/223740333-6ab10612-27bc-4ce5-9bb6-018a3a3c5cb4.jpeg)
