@@ -153,6 +153,17 @@ Color palette provided:
 
 ## Techniques applied
 
+* KivyMD Library
+* SQLite Database
+* For loops
+* if statements
+* For loops
+* Variables
+* Database interaction
+* Functions
+* Text Formating
+* Object Oriented Programming (OOP): Classes, Inheritance
+
 ## Computational Thinking 
 
 # Criteria D: Functionality
