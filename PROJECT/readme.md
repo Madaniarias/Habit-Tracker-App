@@ -172,6 +172,113 @@ Color palette provided:
 
 ## Computational Thinking 
 
+### CLASS DATABASE HANDLER
+
+```.PY
+# Creating class data_base handler
+class database_handler:
+
+    # initialize values
+    def __init__(self, namedb: str):
+        self.connection = sqlite3.connect(namedb)
+        self.cursor = self.connection.cursor()
+
+    def search(self, query):
+        result = self.cursor.execute(query).fetchall()
+        return result
+
+    def run_save(self, query):
+        self.cursor.execute(query)
+        self.connection.commit()
+
+    # creating query that created table if not exits.
+    def create_tables(self):
+        query1 = f"""CREATE TABLE if not exists user(
+            id INTEGER PRIMARY KEY,
+            username text NOT NULL,
+            email text NOT NULL,
+            password text NOT NULL
+        )"""
+        query2 = f"""CREATE TABLE if not exists habit(
+            id_habit INTEGER PRIMARY KEY,
+            user_id INTEGER NOT NULL,
+            habit1 INTEGER NOT NULL,
+            habit2 INTEGER NOT NULL,
+            habit3 INTEGER NOT NULL,
+            habit4 INTEGER NOT NULL,
+            habit5 INTEGER NOT NULL,
+            percentage INTEGER NOT NULL,
+            progress_date TEXT NOT NULL UNIQUE
+        )"""
+        # run the query
+        self.run_query(query1)
+        self.run_query(query2)
+
+    # run query
+    def run_query(self, query: str):
+        self.cursor.execute(query)
+        self.connection.commit()
+
+    # close connection
+    def close(self):
+        self.connection.close()
+```
+The database_hadler class is creating a database handler for SQLite databases. Firslty, the class initializes the database by creating a connection and cursor object in the init method. The parameter is set to namedb that is the name of the database that is going to connect to. Secondly, the search method takes a query as a parameter and executes it using the cursor object. It then returns the results of the query. Following is the run_save method that does the same thing as the searh method (take query as parameter and executes with cursor object) but then commits changes to database using the connection object. Later, the create_tables method creates 2 tables (user and habit) if they do not exist already in the database. Then the run_query will help to execute a query using cursor object and commits the changes to the database with connection object. Lastly,the close method closes the connection to the database. The reasoning behing implementing this class is to provide an organized and consistent way to interact with the SQLite database. It will aid with operations such as querying, saving, creating tables, and closing the connection. This class will make the interaction with the database easier reduces the chances of errors due to inconsistent usage of the database API.makes it easier to write code that interacts with the database and reduces the chances of errors due to inconsistent usage of the database API. Also, the class can be reused across the program, reducing code repetition. 
+
+### LOGIN SYSTEM
+
+```.py
+    def try_login(self):
+        # define local variables
+        email = self.ids.email.text
+        passwd = self.ids.passwd.text
+
+        # connect to database
+        db = database_handler(namedb="habit_tracker.db")
+
+        # creat query to get id, password from the table user where the email is the same
+        query = f"SELECT id, password FROM user WHERE email = '{email}'"
+
+        # execute query
+        result = db.search(query)
+
+        # if result variable is not empty, identify hashed password. If password by user matches hash continue
+        if result and pwd_config.identify(result[0][1]) and check_password(hashed=result[0][1], user_password=passwd):
+            user_id = result[0][0]  # Get the user ID from the database
+            # print in the terminal to check if it is working
+            print(f"Login successful")
+            # access user id from Main Screen
+            self.parent.get_screen(
+                'MainScreen').user_id = user_id  # Set the user ID as an attribute of the MainScreen instance
+            # Go to Main Screen
+            self.parent.current = "MainScreen"
+            self.ids.email.text = ""
+            self.ids.passwd.text = ""
+
+        # if email has 0 characters and password has 0 characters print error
+        elif len(email) == 0 and len(passwd) == 0:
+            print("Incorrect email or password")
+            self.ids.email.error = True
+            self.ids.passwd.error = True
+            self.ids.email.helper_text = "This field is required."
+            self.ids.passwd.helper_text = "This field is required."
+            dialog = MDDialog(title="Seems like something went wrong. Try again")
+            dialog.open()
+
+        # else show error
+        else:
+            print("Incorrect email or password")
+            self.ids.email.error = True
+            self.ids.passwd.error = True
+            self.ids.email.helper_text = "Incorrect email or password"
+            self.ids.passwd.helper_text = "Incorrect email or password"
+            dialog = MDDialog(title="Seems like something went wrong. Try again")
+            dialog.open()
+
+```
+
+
+
 # Criteria D: Functionality
 
   
