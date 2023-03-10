@@ -141,7 +141,7 @@ C
 ## Test Plan
 | Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome | |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Functional:  |  |  |  
+| 1       | Functional: Testing functionality of the registration system  | March 6 | Run habit tracker application > Click on the register button in the Log in screen > Fill the text fields with username, email, password and checked password. > Click on the register button on the register screen > Close the habit tracker application > Locate habit_tracker. db database > Find in the main file the user table > Confirm wether the information inputed in the registration screen has been saved in the table in the habit_tracker.db database or not | The new user information will save in the user table in the database habit_tracker.db
 | 2.      | Functional:  |  |  |  
 | 3.      | Functional:  |  |  |  
 | 4       | Non-functional:  |  |  |  
