@@ -6,6 +6,7 @@
 ## CODE
 
 ### PYTHON CODE
+```.py
 # quiz 41
 
 from kivymd.app import MDApp
@@ -40,8 +41,11 @@ class quiz41(MDApp):
 test = quiz41()
 test.run()
 
+```
+
 ### KIVY CODE
 
+```.py
 Screen:
     size: 500,500
     MDBoxLayout:
@@ -181,6 +185,7 @@ Screen:
                     font_size: "65pt"
                     on_release: app.change_turn(square3_3)
 
+```
 ## TEST
 
 https://user-images.githubusercontent.com/111761417/227700083-030c1da2-066e-409e-9fe6-d74a9630f240.mov
