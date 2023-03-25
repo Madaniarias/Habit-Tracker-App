@@ -36,7 +36,6 @@ for item in result:
     sender_id = item[1]
     receiver_id = item[2]
     amount = item[3]
-    si
 
     string = f"id {id},sender_id {sender_id},receiver_id {receiver_id},amount {amount}"
 
